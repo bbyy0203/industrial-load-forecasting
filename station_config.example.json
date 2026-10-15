@@ -1,0 +1,22 @@
+{
+  "project_name": "industrial-load-forecast-example",
+  "dataset_kind": "industrial_split_csv",
+  "train_file": "input/station_train_15min.csv",
+  "validation_file": "input/station_validation_15min.csv",
+  "test_file": "input/station_test_15min.csv",
+  "target_column": "load_kw",
+  "lookback_days": 7,
+  "horizon_hours": 24,
+  "sampling_minutes": 15,
+  "origin_stride_steps": 1,
+  "feature_timezone": "Asia/Shanghai",
+  "load_unit": "kW",
+  "unit_verified": true,
+  "split_strategy": "target_period",
+  "target_periods": {
+    "train": ["YYYY-MM-DD 00:00", "YYYY-MM-DD 23:45"],
+    "validation": ["YYYY-MM-DD 00:00", "YYYY-MM-DD 23:45"],
+    "test": ["YYYY-MM-DD 00:00", "YYYY-MM-DD 23:45"]
+  },
+  "output_folder": "my_outputs"
+}

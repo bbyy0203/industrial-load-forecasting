@@ -1,0 +1,138 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Envs
+.venv/
+.env
+env/
+venv/
+
+# Notebook
+.ipynb_checkpoints/
+
+# Local-only narrative notebooks (kept for reference but not on GitHub —
+# they served their purpose for the project's iteration story; the README
+# and dashboard now carry the public-facing narrative).
+notebooks/_local_archive/
+notebooks/*.ipynb
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project data — regeneratable from data.refresh, but the canonical
+# parquet is committed so the deployed dashboard has data without a
+# cold-start API fetch.
+*.parquet
+!smard_merged_15min.parquet
+*.csv
+!smard_merged_15min_head.csv
+# Dashboard / notebooks read these at runtime — keep tracked so the deployed
+# app and notebooks render correctly.
+!backtest_results/lstm_weather_step7.csv
+!backtest_results/xgboost_weather_step7.csv
+!backtest_results/ablation_summary.csv
+!backtest_results/price_quantile_holdout.csv
+!backtest_results/xgboost_price_holdout.csv
+!backtest_results/battery_pnl_daily.csv
+!backtest_results/xgboost_battery_pnl_daily.csv
+!backtest_results/drift_log.csv
+!backtest_results/lstm_vs_xgboost_load.csv
+!backtest_results/lstm_vs_xgboost_price.csv
+!backtest_results/lstm_vs_xgboost_price_extended.csv
+
+# Model artifacts — only the deployed + comparison-baseline models are committed;
+# experiments stay local. Older versions (price_quantile_v1, v3,
+# lstm_attention_v1, lstm_plain_v1, lstm_weather_v1, best_*.h5,
+# xgboost_price_v1_stripped) are intentionally not tracked.
+model_checkpoints/*
+!model_checkpoints/lstm_quantile_v1/
+!model_checkpoints/price_quantile_v4/
+!model_checkpoints/xgboost_load_v1/
+!model_checkpoints/xgboost_price_v1/
+mlruns/
+models/production/
+models/candidates/
+
+# Training logs
+logs/
+
+# Internal planning — kept local
+PLAN.md
+design.md
+PROJECT_NOTES.md
+memory.md
+
+# Outputs
+output/
+newplot.png
+
+# Private industrial-station data and local experiment artifacts
+input/
+my_outputs/
+industrial_load_*.csv
+industrial_load_*.parquet
+my_load15_config.json
+station4_load15_config.json
+
+# Industrial notebooks contain local outputs and execution context
+01_load15_*.ipynb
+02_load15_*.ipynb
+_write_02_notebook.py
+
+# Local handover / audit logs
+VALIDATION_PROJECT.txt
+TEST_STATUS.txt
+
+# Public, data-free frozen industrial predictor configs
+!model_checkpoints/recent_residual_v1/
+!model_checkpoints/recent_residual_v1/model.json
+!model_checkpoints/recent_residual_global_v1/
+!model_checkpoints/recent_residual_global_v1/model.json
+!model_checkpoints/recent_residual_global_v1/blind_test_freeze_manifest.json
+!model_checkpoints/recent_residual_global_v1/blind_test_result_station1.json
+
+# Legacy German day-ahead project: retained locally, excluded from the
+# industrial portfolio repository.
+.devcontainer/
+.streamlit/
+backtest_results/
+dashboards/
+docs/
+scripts/
+src/
+smard_merged_15min.parquet
+smard_merged_15min_head.csv
+requirements.txt
+pyproject.toml
+README_zh.md
+README_GERMAN_LEGACY.md
+model_checkpoints/lstm_quantile_v1/
+model_checkpoints/price_quantile_v4/
+model_checkpoints/xgboost_load_v1/
+model_checkpoints/xgboost_price_v1/
+.github/workflows/daily_refresh.yml
+.github/workflows/lint.yml
+.github/workflows/tests.yml
+.env.example
+.pre-commit-config.yaml
+
+# Keep only industrial synthetic tests in this portfolio repository
+tests/*
+!tests/__init__.py
+!tests/test_recent_residual_predictor.py
+!tests/test_residual_reconstruction.py

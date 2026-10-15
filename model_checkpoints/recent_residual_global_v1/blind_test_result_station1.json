@@ -1,0 +1,17 @@
+{
+  "status": "completed_once",
+  "station": "#1",
+  "target_period": ["2024-11-01 00:00:00+08:00", "2024-11-30 23:45:00+08:00"],
+  "input_15min_sha256": "efac55f89bd30288b9d64fc4dafc2dcd500eee5859f3dca22c1c9d53aa461f2d",
+  "usable_origins": 2090,
+  "beta": 0.35,
+  "parameters_searched": false,
+  "last_week": {"MAE_kW": 21.619076, "RMSE_kW": 28.926073, "MAPE_pct": 6.674489, "R2": 0.994268},
+  "global_v1": {"MAE_kW": 20.978116, "RMSE_kW": 27.907445, "MAPE_pct": 6.677963, "R2": 0.994665},
+  "MAE_improvement_pct": 2.9647916854511736,
+  "RMSE_improvement_pct": 3.521485750755593,
+  "pre_registered_pass": true,
+  "pass_rule": "global_v1 MAE < Last-week MAE and global_v1 RMSE <= Last-week RMSE",
+  "result_dir": "my_outputs/station1_unseen_blind_global_v1_20261015",
+  "note": "This zero-shot result is permanent and must not be replaced by later station1 tuning. #1-1 December was structurally inspected during month identification but was not aggregated, scored, or used for parameters."
+}

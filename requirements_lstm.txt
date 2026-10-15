@@ -1,0 +1,6 @@
+# 第 9 节及后续原模型实验；先安装 requirements_data.txt。
+# TensorFlow 版本采用源仓库 pyproject.toml 的指定值。
+tensorflow==2.16.2
+keras==3.4.1
+scikit-learn==1.5.2
+holidays==0.57

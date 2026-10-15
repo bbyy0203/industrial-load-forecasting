@@ -1,0 +1,8 @@
+# 第 1—8 节，Python 3.11；保留与源项目一致的 numpy/pandas 版本范围。
+# 固定的直接依赖是复现起点，不是声称已经在所有 Windows 机器验证。
+numpy==1.26.4
+pandas==2.2.3
+pyarrow==17.0.0
+matplotlib==3.9.2
+jupyterlab==4.2.5
+ipykernel==6.29.5

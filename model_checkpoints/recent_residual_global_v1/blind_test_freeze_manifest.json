@@ -1,0 +1,19 @@
+{
+  "frozen_at_utc": "2026-10-15T11:51:00Z",
+  "purpose": "Pre-registered one-shot evaluation on a sealed third station",
+  "model_file": "model_checkpoints/recent_residual_global_v1/model.json",
+  "model_sha256": "8E8211993F83B60CA18B94EE4DD8D8CF14AF029E3B021841FA8048AF0F08D37F",
+  "evaluator_file": "evaluate_sealed_station_global_v1.py",
+  "evaluator_sha256": "6280C09AFBAE629114FD0B8AEA1143EF60BA40045476EC5705016BBFEBE049E1",
+  "protocol_file": "THIRD_STATION_BLIND_TEST_PROTOCOL_zh.md",
+  "protocol_sha256": "413A263F78E14AEADDC5B669A023A5459B24C53EF88B207C9198C986A8762461",
+  "pipeline_check": {
+    "data": "station3 validation only",
+    "usable_origins": 2168,
+    "last_week_MAE_kW": 20.018066488156965,
+    "global_v1_MAE_kW": 19.16997999302031,
+    "output_dir": "my_outputs/sealed_evaluator_pipeline_check_station3_validation"
+  },
+  "third_station_discovered_or_read": false,
+  "station3_station4_test_opened": false
+}

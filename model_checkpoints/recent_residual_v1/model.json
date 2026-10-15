@@ -1,0 +1,18 @@
+{
+  "model_name": "recent_residual_v1",
+  "model_kind": "causal_statistical_forecaster",
+  "formula": "last_week_future + beta * recent_residual_mean_4h",
+  "beta": 0.4,
+  "recent_residual_steps": 16,
+  "week_lag_steps": 672,
+  "horizon_steps": 96,
+  "sampling_minutes": 15,
+  "timezone": "Asia/Shanghai",
+  "load_unit": "kW",
+  "coefficient_selection": "train-only MAE grid search",
+  "walkforward_validation": "4 embargoed train folds; all tuning labels end before evaluation origin",
+  "fallback": "pure last-week baseline when recent 4h residual is incomplete",
+  "hard_failure": "missing value in the 96-point last-week baseline",
+  "test_status": "sealed; not evaluated",
+  "created_date": "2026-10-15"
+}

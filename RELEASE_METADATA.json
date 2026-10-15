@@ -1,0 +1,10 @@
+{
+  "repository_name": "industrial-load-forecasting",
+  "display_title": "工业负荷预测：跨电站因果预测与零样本验证",
+  "visibility_target": "public",
+  "purpose": "company interview portfolio",
+  "license": null,
+  "license_note": "Publicly visible portfolio; no permission to copy, modify, distribute, or commercially reuse is granted.",
+  "industrial_raw_data_included": false,
+  "legacy_german_project_included": false
+}

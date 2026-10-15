@@ -1,0 +1,21 @@
+{
+  "model_name": "recent_residual_global_v1",
+  "model_kind": "station-agnostic causal statistical forecaster",
+  "formula": "station_last_week_future + beta * station_recent_residual_mean_4h",
+  "beta": 0.35,
+  "recent_residual_steps": 16,
+  "week_lag_steps": 672,
+  "horizon_steps": 96,
+  "sampling_minutes": 15,
+  "timezone": "Asia/Shanghai",
+  "load_unit": "kW",
+  "selection_stations": ["#3", "#4"],
+  "coefficient_selection": "train-only equal-station macro mean of MAE / station Last-week MAE",
+  "validation_used_for_selection": false,
+  "station_specific_train_betas": {"#3": 0.4, "#4": 0.3},
+  "fallback": "pure station Last-week baseline when station recent 4h residual is incomplete",
+  "hard_failure": "missing value in station 96-point Last-week baseline",
+  "third_station_status": "sealed; not discovered or read during selection",
+  "test_status": "station #3/#4 December test sealed; not evaluated",
+  "created_date": "2026-10-15"
+}
